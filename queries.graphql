@@ -1,0 +1,38 @@
+query {
+    getProducts {
+        _id
+        name
+        description
+    }
+}
+
+query {
+  getProductById(_id: "63694a0d5dda5b5774a809b4") {
+    _id
+    name
+    description
+  }
+}
+
+mutation {
+  createProduct(datos: { name: "Graph", price: 35, stock: 10, description: "Testing", code: "testCode", thumbnail: "testImage" }) {
+    _id
+    name
+    description
+  }
+}
+
+
+mutation {
+  updateProducts(_id: "63694a0d5dda5b5774a809b4", datos: { name: "Test", price: 34, stock: 10, description: "Testeo", code: "Code", thumbnail: "testeoImage" }) {
+    name
+    description
+  }
+}
+
+mutation {
+  deleteProducts(_id: "638fc2d3429fdf44598f462f") {
+    name
+    description
+  }
+}
